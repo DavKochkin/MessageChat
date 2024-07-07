@@ -12,10 +12,11 @@ protocol AuthViewProtocol: AnyObject {
 }
 
 
-class AuthView: UIViewController {
+class AuthView: UIViewController, AuthViewProtocol {
+    
+    var presenter: AuthViewPresenterProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 }
