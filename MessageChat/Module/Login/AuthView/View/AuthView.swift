@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AuthView.swift
 //  MessageChat
 //
 //  Created by David Kochkin on 07.07.2024.
@@ -7,13 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-
+protocol AuthViewProtocol: AnyObject {
+    
 }
 
+
+class AuthView: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+}
