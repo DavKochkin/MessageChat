@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041FCB232C4D1037006AE9AA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 041FCB212C4D1037006AE9AA /* Localizable.strings */; };
+		041FCB2A2C4D1349006AE9AA /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041FCB292C4D1349006AE9AA /* String+Ext.swift */; };
 		042DC9292C3AAFBF00B9CF1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DC9282C3AAFBF00B9CF1A /* AppDelegate.swift */; };
 		042DC92B2C3AAFBF00B9CF1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DC92A2C3AAFBF00B9CF1A /* SceneDelegate.swift */; };
 		042DC9322C3AAFC000B9CF1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042DC9312C3AAFC000B9CF1A /* Assets.xcassets */; };
@@ -19,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041FCB222C4D1037006AE9AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		041FCB242C4D1061006AE9AA /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		041FCB292C4D1349006AE9AA /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		042DC9252C3AAFBF00B9CF1A /* MessageChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		042DC9282C3AAFBF00B9CF1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		042DC92A2C3AAFBF00B9CF1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		041FCB252C4D1325006AE9AA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				041FCB292C4D1349006AE9AA /* String+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		042DC91C2C3AAFBF00B9CF1A = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +82,7 @@
 				042DC9312C3AAFC000B9CF1A /* Assets.xcassets */,
 				042DC9332C3AAFC000B9CF1A /* LaunchScreen.storyboard */,
 				042DC9362C3AAFC000B9CF1A /* Info.plist */,
+				041FCB212C4D1037006AE9AA /* Localizable.strings */,
 			);
 			path = MessageChat;
 			sourceTree = "<group>";
@@ -182,6 +196,7 @@
 		04BC4E822C4D088300E7909D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				041FCB252C4D1325006AE9AA /* Extensions */,
 				04BC4E832C4D089100E7909D /* TextField */,
 				042DC94E2C3AE6BA00B9CF1A /* FirebaseManager */,
 			);
@@ -233,11 +248,12 @@
 			};
 			buildConfigurationList = 042DC9202C3AAFBF00B9CF1A /* Build configuration list for PBXProject "MessageChat" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ru;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 042DC91C2C3AAFBF00B9CF1A;
 			productRefGroup = 042DC9262C3AAFBF00B9CF1A /* Products */;
@@ -255,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				042DC9322C3AAFC000B9CF1A /* Assets.xcassets in Resources */,
+				041FCB232C4D1037006AE9AA /* Localizable.strings in Resources */,
 				042DC9352C3AAFC000B9CF1A /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +289,7 @@
 				04BC4E852C4D08B600E7909D /* TextField.swift in Sources */,
 				042DC9482C3AB35000B9CF1A /* AuthView.swift in Sources */,
 				042DC94A2C3AB3AA00B9CF1A /* AuthViewPresenter.swift in Sources */,
+				041FCB2A2C4D1349006AE9AA /* String+Ext.swift in Sources */,
 				042DC94D2C3AE5D100B9CF1A /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +297,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		041FCB212C4D1037006AE9AA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				041FCB222C4D1037006AE9AA /* en */,
+				041FCB242C4D1061006AE9AA /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		042DC9332C3AAFC000B9CF1A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -295,6 +322,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -358,6 +386,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
