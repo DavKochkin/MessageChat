@@ -16,7 +16,10 @@ class AuthView: UIViewController, AuthViewProtocol {
     
     var presenter: AuthViewPresenterProtocol!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
     }
 }

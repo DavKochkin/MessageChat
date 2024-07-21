@@ -15,6 +15,7 @@
 		042DC94A2C3AB3AA00B9CF1A /* AuthViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DC9492C3AB3AA00B9CF1A /* AuthViewPresenter.swift */; };
 		042DC94D2C3AE5D100B9CF1A /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DC94C2C3AE5D100B9CF1A /* Builder.swift */; };
 		042DC9502C3AE6D100B9CF1A /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DC94F2C3AE6D100B9CF1A /* FirebaseManager.swift */; };
+		04BC4E852C4D08B600E7909D /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC4E842C4D08B600E7909D /* TextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		042DC9492C3AB3AA00B9CF1A /* AuthViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewPresenter.swift; sourceTree = "<group>"; };
 		042DC94C2C3AE5D100B9CF1A /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		042DC94F2C3AE6D100B9CF1A /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		04BC4E842C4D08B600E7909D /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +111,7 @@
 		042DC9402C3AB1A700B9CF1A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				042DC94E2C3AE6BA00B9CF1A /* FirebaseManager */,
+				04BC4E822C4D088300E7909D /* Helpers */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -175,6 +177,23 @@
 				042DC94F2C3AE6D100B9CF1A /* FirebaseManager.swift */,
 			);
 			path = FirebaseManager;
+			sourceTree = "<group>";
+		};
+		04BC4E822C4D088300E7909D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				04BC4E832C4D089100E7909D /* TextField */,
+				042DC94E2C3AE6BA00B9CF1A /* FirebaseManager */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		04BC4E832C4D089100E7909D /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				04BC4E842C4D08B600E7909D /* TextField.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +269,7 @@
 				042DC9502C3AE6D100B9CF1A /* FirebaseManager.swift in Sources */,
 				042DC9292C3AAFBF00B9CF1A /* AppDelegate.swift in Sources */,
 				042DC92B2C3AAFBF00B9CF1A /* SceneDelegate.swift in Sources */,
+				04BC4E852C4D08B600E7909D /* TextField.swift in Sources */,
 				042DC9482C3AB35000B9CF1A /* AuthView.swift in Sources */,
 				042DC94A2C3AB3AA00B9CF1A /* AuthViewPresenter.swift in Sources */,
 				042DC94D2C3AE5D100B9CF1A /* Builder.swift in Sources */,
