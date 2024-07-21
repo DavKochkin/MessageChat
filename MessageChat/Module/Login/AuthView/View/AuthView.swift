@@ -16,7 +16,7 @@ class AuthView: UIViewController, AuthViewProtocol {
     
     var presenter: AuthViewPresenterProtocol!
     
-    
+//    let pageTitle: UILabel = {}() 
     
     override func viewDidLoad() {
         super.viewDidLoad()
