@@ -19,12 +19,23 @@ class AuthView: UIViewController, AuthViewProtocol {
     let pageTitle: UILabel = {
         $0.text = .localized("authTitleLabel")
         $0.textColor = .white
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.font = .systemFont(ofSize: 26, weight: .black)
         return $0
-    }(UILabel(frame: CGRect(x: 10, y: 100, width: 100, height: 50)))
+    }(UILabel())
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
         view.addSubview(pageTitle)
+        setConstraints()
+    }
+    
+    private func setConstraints() {
+        NSLayoutConstraint.activate([
+            pageTitle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
+            pageTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            pageTitle.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+        ])
     }
 }
