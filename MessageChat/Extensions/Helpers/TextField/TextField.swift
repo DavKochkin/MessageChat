@@ -17,6 +17,7 @@ class TextField: UITextField {
         self.fieldPlaceholder = fieldPlaceholder
         self.isPassword = isPassword
         super.init(frame: frame)
+        translatesAutoresizingMaskIntoConstraints = false 
         
         setupTextField()
     }

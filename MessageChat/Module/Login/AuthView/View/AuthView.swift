@@ -24,10 +24,15 @@ class AuthView: UIViewController, AuthViewProtocol {
         return $0
     }(UILabel())
     
+    lazy var emailField: UITextField    = TextField(fieldPlaceholder: "Email")
+    lazy var passwordField: UITextField = TextField(fieldPlaceholder: .localized("passwordPlaceholder"))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
         view.addSubview(pageTitle)
+        view.addSubview(emailField)
+        view.addSubview(passwordField)
         setConstraints()
     }
     
