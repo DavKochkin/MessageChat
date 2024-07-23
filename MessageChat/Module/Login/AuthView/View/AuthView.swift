@@ -25,14 +25,14 @@ class AuthView: UIViewController, AuthViewProtocol {
     }(UILabel())
     
     lazy var emailField: UITextField    = TextField(fieldPlaceholder: "Email")
-    lazy var passwordField: UITextField = TextField(fieldPlaceholder: .localized("passwordPlaceholder"))
+    lazy var passwordField: UITextField = TextField(fieldPlaceholder: .localized("passwordPlaceholder"), isPassword: true )
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
-        view.addSubview(pageTitle)
-        view.addSubview(emailField)
-        view.addSubview(passwordField)
+        
+        view.addSubviews(pageTitle, emailField, passwordField)
+        
         setConstraints()
     }
     
@@ -41,6 +41,17 @@ class AuthView: UIViewController, AuthViewProtocol {
             pageTitle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
             pageTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             pageTitle.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            
+            emailField.heightAnchor.constraint(equalToConstant: 50),
+            passwordField.heightAnchor.constraint(equalToConstant: 50),
+            
+            emailField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            emailField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            emailField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -30),
+            
+            passwordField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            passwordField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            passwordField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 40),
         ])
     }
 }
