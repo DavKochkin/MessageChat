@@ -24,8 +24,8 @@ class AuthView: UIViewController, AuthViewProtocol {
         return $0
     }(UILabel())
     
-    lazy var emailField: UITextField    = TextField(fieldPlaceholder: "Email")
-    lazy var passwordField: UITextField = TextField(fieldPlaceholder: .localized("passwordPlaceholder"), isPassword: true )
+    private lazy var emailField: UITextField    = TextField(fieldPlaceholder: "Email")
+    private lazy var passwordField: UITextField = TextField(fieldPlaceholder: .localized("passwordPlaceholder"), isPassword: true )
     
     override func viewDidLoad() {
         super.viewDidLoad()
