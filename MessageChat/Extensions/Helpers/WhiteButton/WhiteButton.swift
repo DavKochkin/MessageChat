@@ -25,9 +25,10 @@ class WhiteButton: UIButton  {
             guard let self = self else { return }
             completion()
         }), for: .touchUpInside)
+        translatesAutoresizingMaskIntoConstraints = false
         setTitle(buttonText, for: .normal)
         backgroundColor = .white
-        setTitleColor(.white, for: .normal)
+        setTitleColor(.black, for: .normal)
         layer.cornerRadius = 10 
     }
     

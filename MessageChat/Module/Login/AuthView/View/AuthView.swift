@@ -27,11 +27,15 @@ class AuthView: UIViewController, AuthViewProtocol {
     private lazy var emailField: UITextField    = TextField(fieldPlaceholder: "Email")
     private lazy var passwordField: UITextField = TextField(fieldPlaceholder: .localized("passwordPlaceholder"), isPassword: true )
     
+    private lazy var authButton: UIButton = WhiteButton(buttonText: .localized("authButtonText")) {
+        print("Auth ")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
         
-        view.addSubviews(pageTitle, emailField, passwordField)
+        view.addSubviews(pageTitle, emailField, passwordField, authButton)
         
         setConstraints()
     }
@@ -52,6 +56,11 @@ class AuthView: UIViewController, AuthViewProtocol {
             passwordField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
             passwordField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             passwordField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 40),
+            
+            authButton.topAnchor.constraint(equalTo: passwordField.bottomAnchor, constant: 40),
+            authButton.heightAnchor.constraint(equalToConstant: 50),
+            authButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            authButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30)
         ])
     }
 }

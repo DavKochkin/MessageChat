@@ -8,3 +8,4 @@
 
 "authTitleLabel" = "Авторизация";
 "passwordPlaceholder" = "Пароль";
+"authButtonText" = "Войти";
