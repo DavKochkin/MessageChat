@@ -7,15 +7,20 @@
 
 import UIKit
 
-class WhiteButton: UIButton  {
+class Button: UIButton  {
     
     var buttonText: String
     var completion: () -> Void
+    var buttonColor: UIColor
+    var titleColor: UIColor
     
     
-    init(buttonText: String, completion: @escaping () -> Void) {
-        self.buttonText = buttonText
-        self.completion = completion
+    init(buttonText: String, buttonColor: UIColor = .white, titleColor: UIColor = .black, completion: @escaping () -> Void) {
+        self.buttonText  = buttonText
+        self.completion  = completion
+        self.buttonColor = buttonColor
+        self.titleColor  = titleColor
+        
         super.init(frame: .zero)
         setupButton()
     }
@@ -27,8 +32,8 @@ class WhiteButton: UIButton  {
         }), for: .touchUpInside)
         translatesAutoresizingMaskIntoConstraints = false
         setTitle(buttonText, for: .normal)
-        backgroundColor = .white
-        setTitleColor(.black, for: .normal)
+        backgroundColor = buttonColor
+        setTitleColor(titleColor, for: .normal)
         layer.cornerRadius = 10 
     }
     

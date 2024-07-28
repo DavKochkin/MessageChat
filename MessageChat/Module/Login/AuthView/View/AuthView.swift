@@ -27,7 +27,7 @@ class AuthView: UIViewController, AuthViewProtocol {
     private lazy var emailField: UITextField    = TextField(fieldPlaceholder: "Email")
     private lazy var passwordField: UITextField = TextField(fieldPlaceholder: .localized("passwordPlaceholder"), isPassword: true )
     
-    private lazy var authButton: UIButton = WhiteButton(buttonText: .localized("authButtonText")) {
+    private lazy var authButton: UIButton = Button(buttonText: .localized("authButtonText")) {
         print("Auth ")
     }
     
@@ -35,15 +35,14 @@ class AuthView: UIViewController, AuthViewProtocol {
         super.viewDidLoad()
         view.backgroundColor = .black
         
-        view.addSubviews(pageTitle, emailField, passwordField, authButton)
+        view.addSubviews(pageTitle, emailField, passwordField, authButton, bottomButton)
         
         setConstraints()
     }
     
-    private lazy var bottomButton: UIButton = {
-        
-        return $0
-    }(UIButton())
+    private lazy var bottomButton: UIButton = Button(buttonText: .localized("regButtonText"), buttonColor: .clear, titleColor: .white) {
+        print("Reg")
+    }
     
     private func setConstraints() {
         NSLayoutConstraint.activate([
@@ -65,7 +64,12 @@ class AuthView: UIViewController, AuthViewProtocol {
             authButton.topAnchor.constraint(equalTo: passwordField.bottomAnchor, constant: 40),
             authButton.heightAnchor.constraint(equalToConstant: 50),
             authButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-            authButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30)
+            authButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            
+            bottomButton.heightAnchor.constraint(equalToConstant: 50),
+            bottomButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            bottomButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+            bottomButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10)
         ])
     }
 }
