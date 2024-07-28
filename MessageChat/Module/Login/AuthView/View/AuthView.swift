@@ -40,6 +40,11 @@ class AuthView: UIViewController, AuthViewProtocol {
         setConstraints()
     }
     
+    private lazy var bottomButton: UIButton = {
+        
+        return $0
+    }(UIButton())
+    
     private func setConstraints() {
         NSLayoutConstraint.activate([
             pageTitle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
