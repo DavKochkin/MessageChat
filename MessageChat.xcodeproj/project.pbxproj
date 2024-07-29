@@ -11,6 +11,7 @@
 		041FCB2A2C4D1349006AE9AA /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041FCB292C4D1349006AE9AA /* String+Ext.swift */; };
 		041FCB2E2C501A2F006AE9AA /* UiView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041FCB2D2C501A2F006AE9AA /* UiView+Ext.swift */; };
 		041FCB312C5152D8006AE9AA /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041FCB302C5152D8006AE9AA /* Button.swift */; };
+		041FCB3B2C57EE95006AE9AA /* RegView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041FCB3A2C57EE95006AE9AA /* RegView.swift */; };
 		042DC9292C3AAFBF00B9CF1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DC9282C3AAFBF00B9CF1A /* AppDelegate.swift */; };
 		042DC92B2C3AAFBF00B9CF1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DC92A2C3AAFBF00B9CF1A /* SceneDelegate.swift */; };
 		042DC9322C3AAFC000B9CF1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 042DC9312C3AAFC000B9CF1A /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		041FCB292C4D1349006AE9AA /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		041FCB2D2C501A2F006AE9AA /* UiView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiView+Ext.swift"; sourceTree = "<group>"; };
 		041FCB302C5152D8006AE9AA /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		041FCB3A2C57EE95006AE9AA /* RegView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegView.swift; sourceTree = "<group>"; };
 		042DC9252C3AAFBF00B9CF1A /* MessageChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		042DC9282C3AAFBF00B9CF1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		042DC92A2C3AAFBF00B9CF1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,28 @@
 				041FCB2F2C5152D1006AE9AA /* WhiteButton */,
 			);
 			path = Button;
+			sourceTree = "<group>";
+		};
+		041FCB362C57EE6F006AE9AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				041FCB3A2C57EE95006AE9AA /* RegView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		041FCB372C57EE76006AE9AA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		041FCB392C57EE86006AE9AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		042DC91C2C3AAFBF00B9CF1A = {
@@ -187,6 +211,9 @@
 		042DC9432C3AB1CC00B9CF1A /* RegView */ = {
 			isa = PBXGroup;
 			children = (
+				041FCB392C57EE86006AE9AA /* Model */,
+				041FCB372C57EE76006AE9AA /* Presenter */,
+				041FCB362C57EE6F006AE9AA /* View */,
 			);
 			path = RegView;
 			sourceTree = "<group>";
@@ -327,6 +354,7 @@
 				04BC4E852C4D08B600E7909D /* TextField.swift in Sources */,
 				042DC9482C3AB35000B9CF1A /* AuthView.swift in Sources */,
 				041FCB2E2C501A2F006AE9AA /* UiView+Ext.swift in Sources */,
+				041FCB3B2C57EE95006AE9AA /* RegView.swift in Sources */,
 				042DC94A2C3AB3AA00B9CF1A /* AuthViewPresenter.swift in Sources */,
 				041FCB2A2C4D1349006AE9AA /* String+Ext.swift in Sources */,
 				042DC94D2C3AE5D100B9CF1A /* Builder.swift in Sources */,
