@@ -9,4 +9,8 @@
 "authTitleLabel" = "Авторизация";
 "passwordPlaceholder" = "Пароль";
 "authButtonText" = "Войти";
+
+"regTitleLabel" = "Регистрация";
 "regButtonText" = "Регистрация";
+
+"namePlaceholder" = "Пароль";
