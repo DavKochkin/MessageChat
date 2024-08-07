@@ -23,7 +23,7 @@ class RegView: UIViewController, RegViewProtocol {
         return $0
     }(UILabel())
     
-    private lazy var nameField: UITextField     = TextField(fieldPlaceholder: "namePlaceholder")
+    private lazy var nameField: UITextField     = TextField(fieldPlaceholder: .localized("namePlaceholder"))
     private lazy var emailField: UITextField    = TextField(fieldPlaceholder: "Email")
     private lazy var passwordField: UITextField = TextField(fieldPlaceholder: .localized("passwordPlaceholder"), isPassword: true)
     
@@ -52,7 +52,7 @@ class RegView: UIViewController, RegViewProtocol {
             passwordField.heightAnchor.constraint(equalToConstant: 50),
             
             emailField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-            emailField.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            emailField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             emailField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -30),
             
             nameField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),

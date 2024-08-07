@@ -7,6 +7,11 @@
 
 import UIKit
 
+
+enum WindowManager: String {
+    case auth, reg, app
+}
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -16,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let vc = Builder.getAuthView()
+        let vc = Builder.getRegView()
         
         let window = UIWindow(windowScene: windowScene)
         
@@ -24,6 +29,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.makeKeyAndVisible()
         
         self.window = window
+    }
+    
+    
+    @objc
+    private func windowManager(notification: Notification) {
+        guard let userInfo = notification.userInfo else     {
+            return
+        }
+       
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
