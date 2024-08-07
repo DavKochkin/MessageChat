@@ -19,4 +19,13 @@ class Builder {
         return view 
     }
     
+    static func getRegView() -> UIViewController {
+        let view = RegView()
+        let presenter = RegViewPresenter(view: view)
+        
+        view.presenter = presenter
+        
+        return view
+    }
+    
 }
