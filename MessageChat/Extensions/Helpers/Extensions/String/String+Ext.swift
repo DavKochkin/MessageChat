@@ -12,3 +12,8 @@ extension String {
         String(localized: text)
     }
 }
+
+//MARK: - UserInfo Keys
+extension String {
+    static let state = "state"
+}

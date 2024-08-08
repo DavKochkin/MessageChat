@@ -12,6 +12,7 @@ enum WindowManager: String {
     case auth, reg, app
 }
 
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -34,10 +35,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     @objc
     private func windowManager(notification: Notification) {
+        
         guard let userInfo = notification.userInfo else     {
             return
         }
        
+        if let state = userInfo[String.state] {
+            return
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
