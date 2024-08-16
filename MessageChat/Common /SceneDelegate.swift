@@ -27,11 +27,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let vc = Builder.getRegView()
-        
         let window = UIWindow(windowScene: windowScene)
         
-        window.rootViewController = vc
+        window.rootViewController = Builder.getAuthView()
         window.makeKeyAndVisible()
         
         self.window = window
@@ -44,10 +42,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let userInfo = notification.userInfo else     {
             return
         }
-       
-//        if let state = userInfo[String.state] {
-//            return
-//        }
+        
+        guard let  state = userInfo[String.state] as? WindowManager else {
+            return
+        }
+        
+        switch state {
+        case .auth:
+            window?.rootViewController = Builder.getAuthView()
+        case .reg:
+            window?.rootViewController = Builder.getRegView()
+        case .app:
+            print("")
+        }
+            
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

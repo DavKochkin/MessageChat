@@ -28,7 +28,7 @@ class AuthView: UIViewController, AuthViewProtocol {
     private lazy var passwordField: UITextField = TextField(fieldPlaceholder: .localized("passwordPlaceholder"), isPassword: true )
     
     private lazy var authButton: UIButton = Button(buttonText: .localized("authButtonText")) {
-        print("Auth ")
+        
     }
     
     override func viewDidLoad() {
@@ -41,7 +41,9 @@ class AuthView: UIViewController, AuthViewProtocol {
     }
     
     private lazy var bottomButton: UIButton = Button(buttonText: .localized("regButtonText"), buttonColor: .clear, titleColor: .white) {
-        print("Reg")
+        NotificationCenter.default.post(name: .windowManager,
+                                        object: nil,
+                                        userInfo: [String.state: WindowManager.reg])
     }
     
     private func setConstraints() {

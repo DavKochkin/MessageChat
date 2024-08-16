@@ -32,7 +32,9 @@ class RegView: UIViewController, RegViewProtocol {
     }
     
     private lazy var bottomButton: UIButton = Button(buttonText: .localized("authTitleLabel"), buttonColor: .clear, titleColor: .white) {
-        print("Reg")
+        NotificationCenter.default.post(name: .windowManager,
+                                        object: nil,
+                                        userInfo: [String.state: WindowManager.auth])
     }
     
     override func viewDidLoad() {
