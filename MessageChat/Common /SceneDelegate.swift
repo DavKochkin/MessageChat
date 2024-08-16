@@ -19,6 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(windowManager(notification: )),
+                                               name: .windowManager,
+                                               object: nil)
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
@@ -40,9 +45,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
        
-        if let state = userInfo[String.state] {
-            return
-        }
+//        if let state = userInfo[String.state] {
+//            return
+//        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

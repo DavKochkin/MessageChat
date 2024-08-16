@@ -21,6 +21,7 @@
 		042DC94A2C3AB3AA00B9CF1A /* AuthViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DC9492C3AB3AA00B9CF1A /* AuthViewPresenter.swift */; };
 		042DC94D2C3AE5D100B9CF1A /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DC94C2C3AE5D100B9CF1A /* Builder.swift */; };
 		042DC9502C3AE6D100B9CF1A /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DC94F2C3AE6D100B9CF1A /* FirebaseManager.swift */; };
+		049E74BC2C6FB1E3009CA6CD /* NSNotification.Name.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E74BB2C6FB1E3009CA6CD /* NSNotification.Name.ext.swift */; };
 		04BC4E852C4D08B600E7909D /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC4E842C4D08B600E7909D /* TextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		042DC9492C3AB3AA00B9CF1A /* AuthViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewPresenter.swift; sourceTree = "<group>"; };
 		042DC94C2C3AE5D100B9CF1A /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		042DC94F2C3AE6D100B9CF1A /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		049E74BB2C6FB1E3009CA6CD /* NSNotification.Name.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotification.Name.ext.swift; sourceTree = "<group>"; };
 		04BC4E842C4D08B600E7909D /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +61,7 @@
 		041FCB252C4D1325006AE9AA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				049E74BA2C6FB1C8009CA6CD /* NSNotification.Name */,
 				041FCB2C2C501A1C006AE9AA /* UIView */,
 				041FCB2B2C501A08006AE9AA /* String */,
 			);
@@ -260,6 +263,14 @@
 			path = FirebaseManager;
 			sourceTree = "<group>";
 		};
+		049E74BA2C6FB1C8009CA6CD /* NSNotification.Name */ = {
+			isa = PBXGroup;
+			children = (
+				049E74BB2C6FB1E3009CA6CD /* NSNotification.Name.ext.swift */,
+			);
+			path = NSNotification.Name;
+			sourceTree = "<group>";
+		};
 		04BC4E822C4D088300E7909D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +365,7 @@
 				042DC9502C3AE6D100B9CF1A /* FirebaseManager.swift in Sources */,
 				042DC9292C3AAFBF00B9CF1A /* AppDelegate.swift in Sources */,
 				042DC92B2C3AAFBF00B9CF1A /* SceneDelegate.swift in Sources */,
+				049E74BC2C6FB1E3009CA6CD /* NSNotification.Name.ext.swift in Sources */,
 				04BC4E852C4D08B600E7909D /* TextField.swift in Sources */,
 				042DC9482C3AB35000B9CF1A /* AuthView.swift in Sources */,
 				041FCB2E2C501A2F006AE9AA /* UiView+Ext.swift in Sources */,
