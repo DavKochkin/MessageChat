@@ -22,6 +22,7 @@
 		042DC94D2C3AE5D100B9CF1A /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DC94C2C3AE5D100B9CF1A /* Builder.swift */; };
 		042DC9502C3AE6D100B9CF1A /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DC94F2C3AE6D100B9CF1A /* FirebaseManager.swift */; };
 		049E74BC2C6FB1E3009CA6CD /* NSNotification.Name.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E74BB2C6FB1E3009CA6CD /* NSNotification.Name.ext.swift */; };
+		049E74C02C6FBB76009CA6CD /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E74BF2C6FBB76009CA6CD /* TabBar.swift */; };
 		04BC4E852C4D08B600E7909D /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC4E842C4D08B600E7909D /* TextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		042DC94C2C3AE5D100B9CF1A /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		042DC94F2C3AE6D100B9CF1A /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		049E74BB2C6FB1E3009CA6CD /* NSNotification.Name.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotification.Name.ext.swift; sourceTree = "<group>"; };
+		049E74BF2C6FBB76009CA6CD /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		04BC4E842C4D08B600E7909D /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -200,6 +202,8 @@
 		042DC9412C3AB1BB00B9CF1A /* TapBar */ = {
 			isa = PBXGroup;
 			children = (
+				049E74BE2C6FBB4D009CA6CD /* Presenter */,
+				049E74BD2C6FBB49009CA6CD /* View */,
 			);
 			path = TapBar;
 			sourceTree = "<group>";
@@ -269,6 +273,21 @@
 				049E74BB2C6FB1E3009CA6CD /* NSNotification.Name.ext.swift */,
 			);
 			path = NSNotification.Name;
+			sourceTree = "<group>";
+		};
+		049E74BD2C6FBB49009CA6CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				049E74BF2C6FBB76009CA6CD /* TabBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		049E74BE2C6FBB4D009CA6CD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		04BC4E822C4D088300E7909D /* Helpers */ = {
@@ -375,6 +394,7 @@
 				042DC94D2C3AE5D100B9CF1A /* Builder.swift in Sources */,
 				041FCB312C5152D8006AE9AA /* Button.swift in Sources */,
 				041FCB3D2C57EEE0006AE9AA /* RegViewPresenter .swift in Sources */,
+				049E74C02C6FBB76009CA6CD /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
