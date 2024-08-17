@@ -17,4 +17,9 @@ class TabBarPresenter: TabBarPresenterProtocol {
     required init(view: any TabBarViewProtocol) {
         self.view = view 
     }
+
+    
+    private func setupControllers() {
+        
+    }
 }
