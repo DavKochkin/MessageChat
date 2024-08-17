@@ -7,12 +7,14 @@
 
 import UIKit
 
-class TabBar: UITabBarController {
+protocol TabBarViewProtocol: AnyObject {
     
+}
+
+class TabBarView: UITabBarController, TabBarViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
     
 }
