@@ -6,3 +6,17 @@
 //
 
 import UIKit
+
+protocol UserListViewProtocol: AnyObject {
+    
+}
+
+
+class UserListView: UIViewController, UserListViewProtocol {
+    
+    var presenter: UserListViewPresenter! 
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
