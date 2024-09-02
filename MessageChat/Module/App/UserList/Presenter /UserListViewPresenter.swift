@@ -16,6 +16,6 @@ class UserListViewPresenter: UserListViewPresenterProtocol {
     weak var view: UserListViewProtocol?
     
     required init(view: any UserListViewProtocol) {
-        self.view = view 
+        self.view = view
     }
 }

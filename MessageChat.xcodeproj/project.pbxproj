@@ -21,6 +21,7 @@
 		042DC94A2C3AB3AA00B9CF1A /* AuthViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DC9492C3AB3AA00B9CF1A /* AuthViewPresenter.swift */; };
 		042DC94D2C3AE5D100B9CF1A /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DC94C2C3AE5D100B9CF1A /* Builder.swift */; };
 		042DC9502C3AE6D100B9CF1A /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042DC94F2C3AE6D100B9CF1A /* FirebaseManager.swift */; };
+		0432D3212C863D8A00F00A24 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432D3202C863D8A00F00A24 /* MessageListView.swift */; };
 		043F042F2C70B9ED00BCF458 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F042E2C70B9ED00BCF458 /* TabBarPresenter.swift */; };
 		043F04382C73ADD300BCF458 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F04372C73ADD300BCF458 /* UserListView.swift */; };
 		043F043B2C73AE2E00BCF458 /* UserListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F043A2C73AE2E00BCF458 /* UserListViewPresenter.swift */; };
@@ -47,6 +48,7 @@
 		042DC9492C3AB3AA00B9CF1A /* AuthViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewPresenter.swift; sourceTree = "<group>"; };
 		042DC94C2C3AE5D100B9CF1A /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		042DC94F2C3AE6D100B9CF1A /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		0432D3202C863D8A00F00A24 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
 		043F042E2C70B9ED00BCF458 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
 		043F04372C73ADD300BCF458 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		043F043A2C73AE2E00BCF458 /* UserListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewPresenter.swift; sourceTree = "<group>"; };
@@ -275,6 +277,45 @@
 			path = FirebaseManager;
 			sourceTree = "<group>";
 		};
+		0432D31B2C863BBA00F00A24 /* Messenger */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Messenger;
+			sourceTree = "<group>";
+		};
+		0432D31C2C863BD200F00A24 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				0432D31F2C863C2600F00A24 /* Model */,
+				0432D31E2C863C1D00F00A24 /* Presenter */,
+				0432D31D2C863C1800F00A24 /* View */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		0432D31D2C863C1800F00A24 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0432D3202C863D8A00F00A24 /* MessageListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0432D31E2C863C1D00F00A24 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0432D31F2C863C2600F00A24 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		043F04302C73AD5300BCF458 /* UserList */ = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +329,8 @@
 		043F04312C73AD6600BCF458 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				0432D31C2C863BD200F00A24 /* Messages */,
+				0432D31B2C863BBA00F00A24 /* Messenger */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -434,6 +477,7 @@
 				042DC9292C3AAFBF00B9CF1A /* AppDelegate.swift in Sources */,
 				042DC92B2C3AAFBF00B9CF1A /* SceneDelegate.swift in Sources */,
 				043F04382C73ADD300BCF458 /* UserListView.swift in Sources */,
+				0432D3212C863D8A00F00A24 /* MessageListView.swift in Sources */,
 				049E74BC2C6FB1E3009CA6CD /* NSNotification.Name.ext.swift in Sources */,
 				04BC4E852C4D08B600E7909D /* TextField.swift in Sources */,
 				043F043B2C73AE2E00BCF458 /* UserListViewPresenter.swift in Sources */,
