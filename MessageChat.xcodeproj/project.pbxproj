@@ -25,6 +25,7 @@
 		043F042F2C70B9ED00BCF458 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F042E2C70B9ED00BCF458 /* TabBarPresenter.swift */; };
 		043F04382C73ADD300BCF458 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F04372C73ADD300BCF458 /* UserListView.swift */; };
 		043F043B2C73AE2E00BCF458 /* UserListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F043A2C73AE2E00BCF458 /* UserListViewPresenter.swift */; };
+		048609132C90A715001FBE51 /* MessageListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048609122C90A715001FBE51 /* MessageListViewPresenter.swift */; };
 		049E74BC2C6FB1E3009CA6CD /* NSNotification.Name.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E74BB2C6FB1E3009CA6CD /* NSNotification.Name.ext.swift */; };
 		049E74C02C6FBB76009CA6CD /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E74BF2C6FBB76009CA6CD /* TabBarView.swift */; };
 		04BC4E852C4D08B600E7909D /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BC4E842C4D08B600E7909D /* TextField.swift */; };
@@ -52,6 +53,7 @@
 		043F042E2C70B9ED00BCF458 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
 		043F04372C73ADD300BCF458 /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
 		043F043A2C73AE2E00BCF458 /* UserListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewPresenter.swift; sourceTree = "<group>"; };
+		048609122C90A715001FBE51 /* MessageListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewPresenter.swift; sourceTree = "<group>"; };
 		049E74BB2C6FB1E3009CA6CD /* NSNotification.Name.ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotification.Name.ext.swift; sourceTree = "<group>"; };
 		049E74BF2C6FBB76009CA6CD /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		04BC4E842C4D08B600E7909D /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 		0432D31E2C863C1D00F00A24 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				048609122C90A715001FBE51 /* MessageListViewPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -319,8 +322,8 @@
 		043F04302C73AD5300BCF458 /* UserList */ = {
 			isa = PBXGroup;
 			children = (
-				043F04362C73ADC100BCF458 /* Presenter  */,
 				043F04352C73ADBC00BCF458 /* Model */,
+				043F04362C73ADC100BCF458 /* Presenter  */,
 				043F04332C73ADA700BCF458 /* View */,
 			);
 			path = UserList;
@@ -487,6 +490,7 @@
 				041FCB3B2C57EE95006AE9AA /* RegView.swift in Sources */,
 				042DC94A2C3AB3AA00B9CF1A /* AuthViewPresenter.swift in Sources */,
 				041FCB2A2C4D1349006AE9AA /* String+Ext.swift in Sources */,
+				048609132C90A715001FBE51 /* MessageListViewPresenter.swift in Sources */,
 				042DC94D2C3AE5D100B9CF1A /* Builder.swift in Sources */,
 				041FCB312C5152D8006AE9AA /* Button.swift in Sources */,
 				041FCB3D2C57EEE0006AE9AA /* RegViewPresenter .swift in Sources */,

@@ -7,3 +7,14 @@
 
 import UIKit
 
+protocol MessageListViewProtocol: AnyObject {
+    
+}
+
+class MessageListView: UIViewController, MessageListViewProtocol {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+}
