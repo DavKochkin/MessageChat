@@ -13,8 +13,11 @@ protocol MessageListViewProtocol: AnyObject {
 
 class MessageListView: UIViewController, MessageListViewProtocol {
     
+    var presenter: MessageListViewPresenter!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .red
     }
     
 }

@@ -12,9 +12,10 @@ protocol MessageListViewPresenterProtocol: AnyObject {
 }
 
 class MessageListViewPresenter: MessageListViewPresenterProtocol {
-    weak var view: MessageListViewPresenterProtocol?
     
-    init(view: MessageListViewPresenterProtocol?) {
+    weak var view: MessageListViewProtocol?
+    
+    init(view: MessageListViewProtocol?) {
         self.view = view
     }
     

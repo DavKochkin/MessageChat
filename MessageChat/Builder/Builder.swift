@@ -37,4 +37,25 @@ class Builder {
         
         return view
     }
+    
+    
+    static func getUserListView() -> UIViewController {
+        let view = UserListView()
+        let presenter = UserListViewPresenter(view: view)
+        
+        view.presenter = presenter
+        
+        return view
+    }
+
+    
+    static func getMessageListView() -> UIViewController {
+        let view = MessageListView()
+        let presenter = MessageListViewPresenter(view: view)
+        
+        view.presenter = presenter
+        
+        return view
+    }
+
 }

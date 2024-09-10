@@ -18,5 +18,6 @@ class UserListView: UIViewController, UserListViewProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .brown
     }
 }
