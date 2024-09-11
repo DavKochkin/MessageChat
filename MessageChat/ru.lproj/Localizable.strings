@@ -6,11 +6,14 @@
   
 */
 
-"authTitleLabel" = "Авторизация";
+"authTitleLabel"      = "Авторизация";
 "passwordPlaceholder" = "Пароль";
-"authButtonText" = "Войти";
+"authButtonText"      = "Войти";
 
 "regTitleLabel" = "Регистрация";
 "regButtonText" = "Регистрация";
 
 "namePlaceholder" = "Имя";
+
+"tabUsers"    = "Пользователи";
+"tabMessages" = "Сообщения";

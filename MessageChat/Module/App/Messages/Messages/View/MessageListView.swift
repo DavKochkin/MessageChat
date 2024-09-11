@@ -17,7 +17,7 @@ class MessageListView: UIViewController, MessageListViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = .lightGray
     }
     
 }
