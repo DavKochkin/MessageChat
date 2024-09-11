@@ -45,7 +45,7 @@ class Builder {
         
         view.presenter = presenter
         
-        return view
+        return UINavigationController(rootViewController: view)
     }
 
     
@@ -55,7 +55,7 @@ class Builder {
         
         view.presenter = presenter
         
-        return view
+        return UINavigationController(rootViewController: view) 
     }
 
 }

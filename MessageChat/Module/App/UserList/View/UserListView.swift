@@ -14,10 +14,14 @@ protocol UserListViewProtocol: AnyObject {
 
 class UserListView: UIViewController, UserListViewProtocol {
     
-    var presenter: UserListViewPresenter! 
-
+    var presenter: UserListViewPresenter!
+    
+    lazy var tableView: UITableView = {
+        return $0
+    }(UITableView(frame: view.bounds, style: .insetGrouped))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .brown
+        title = String("Сообщения")
     }
 }
