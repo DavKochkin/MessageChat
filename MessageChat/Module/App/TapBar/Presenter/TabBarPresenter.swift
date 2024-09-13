@@ -23,14 +23,14 @@ class TabBarPresenter: TabBarPresenterProtocol {
     
     private func setupControllers() {
         let messageList   = Builder.getMessageListView()
-        messageList.title = .localized("tabUsers")
-        messageList.tabBarItem.image = UIImage(systemName: "person.3")
+        messageList.title = .localized("tabMessages")
+        messageList.tabBarItem.image = UIImage(systemName: "rectangle.3.group.bubble")
         
         let userList    = Builder.getUserListView()
-        userList.title  = .localized("tabMessages")
-        userList.tabBarItem.image = UIImage(systemName: "rectangle.3.group.bubble")
+        userList.title  = .localized("tabUsers")
+        userList.tabBarItem.image = UIImage(systemName: "person.3")
         
-        view?.setControllers(views:  [messageList, userList])
+        view?.setControllers(views:  [userList, messageList])
     }
     
     
