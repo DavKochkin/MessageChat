@@ -45,8 +45,9 @@ extension MessageListView: UITableViewDataSource {
         var config   = cell.defaultContentConfiguration()
         config.text  = chatItem.name
         config.image = UIImage(systemName: "person.fill")
-        config.secondaryText = chatItem.lastMessage 
+        config.secondaryText = chatItem.lastMessage.truncate(to: 80)
         
+        cell.contentConfiguration = config
         return cell
     }
     
