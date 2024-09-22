@@ -34,11 +34,20 @@ class MessageListView: UIViewController, MessageListViewProtocol {
 
 extension MessageListView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        presenter.chatList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        let chatItem = presenter.chatList[indexPath.row]
+        
+        var config   = cell.defaultContentConfiguration()
+        config.text  = chatItem.name
+        config.image = UIImage(systemName: "person.fill")
+        config.secondaryText = chatItem.lastMessage 
+        
+        return cell
     }
     
     

@@ -19,10 +19,29 @@ struct ChatItem {
     static func mockData() -> [ChatItem]{
         [
             ChatItem(id: UUID().uuidString,
-                     name: "User",
+                     name: "User1",
                      otherUserId: UUID().uuidString,
                      date: Date(),
-                     lastMessage: "lore")
+                     lastMessage: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"),
+            
+            ChatItem(id: UUID().uuidString,
+                     name: "User2",
+                     otherUserId: UUID().uuidString,
+                     date: Date(),
+                     lastMessage: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"),
+            
+            ChatItem(id: UUID().uuidString,
+                     name: "User3",
+                     otherUserId: UUID().uuidString,
+                     date: Date(),
+                     lastMessage: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"),
+            
+            ChatItem(id: UUID().uuidString,
+                     name: "User4",
+                     otherUserId: UUID().uuidString,
+                     date: Date(),
+                     lastMessage: "Lorem ipsum dolor sit amet, consectetur adipisicing elit"),
+            
         ]
     }
 }
