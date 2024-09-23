@@ -5,4 +5,13 @@
 //  Created by David Kochkin on 23.09.2024.
 //
 
-import Foundation
+import UIKit
+import MessageKit
+
+protocol MessengerViewProtocol: AnyObject {
+    
+}
+
+class MessengerView: MessagesViewController {
+    
+}

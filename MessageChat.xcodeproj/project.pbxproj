@@ -27,6 +27,7 @@
 		043F04382C73ADD300BCF458 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F04372C73ADD300BCF458 /* UserListView.swift */; };
 		043F043B2C73AE2E00BCF458 /* UserListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F043A2C73AE2E00BCF458 /* UserListViewPresenter.swift */; };
 		046DEB552CA02324009D43EE /* ChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046DEB542CA02324009D43EE /* ChatItem.swift */; };
+		046DEB622CA1DBCD009D43EE /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 046DEB612CA1DBCD009D43EE /* MessageKit */; };
 		048609132C90A715001FBE51 /* MessageListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048609122C90A715001FBE51 /* MessageListViewPresenter.swift */; };
 		049E74BC2C6FB1E3009CA6CD /* NSNotification.Name.ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E74BB2C6FB1E3009CA6CD /* NSNotification.Name.ext.swift */; };
 		049E74C02C6FBB76009CA6CD /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E74BF2C6FBB76009CA6CD /* TabBarView.swift */; };
@@ -74,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				046DEB622CA1DBCD009D43EE /* MessageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +471,9 @@
 				ru,
 			);
 			mainGroup = 042DC91C2C3AAFBF00B9CF1A;
+			packageReferences = (
+				046DEB602CA1DBCD009D43EE /* XCRemoteSwiftPackageReference "MessageKit" */,
+			);
 			productRefGroup = 042DC9262C3AAFBF00B9CF1A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -740,6 +745,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		046DEB602CA1DBCD009D43EE /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		046DEB612CA1DBCD009D43EE /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 046DEB602CA1DBCD009D43EE /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 042DC91D2C3AAFBF00B9CF1A /* Project object */;
 }
