@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -62,6 +62,12 @@
 		049E74BF2C6FBB76009CA6CD /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		04BC4E842C4D08B600E7909D /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		046DEB562CA1DA4E009D43EE /* View */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = View; sourceTree = "<group>"; };
+		046DEB572CA1DA56009D43EE /* Presenter */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Presenter; sourceTree = "<group>"; };
+		046DEB582CA1DA61009D43EE /* Model */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Model; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		042DC9222C3AAFBF00B9CF1A /* Frameworks */ = {
@@ -286,6 +292,9 @@
 		0432D31B2C863BBA00F00A24 /* Messenger */ = {
 			isa = PBXGroup;
 			children = (
+				046DEB582CA1DA61009D43EE /* Model */,
+				046DEB572CA1DA56009D43EE /* Presenter */,
+				046DEB562CA1DA4E009D43EE /* View */,
 			);
 			path = Messenger;
 			sourceTree = "<group>";
@@ -424,6 +433,11 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				046DEB562CA1DA4E009D43EE /* View */,
+				046DEB572CA1DA56009D43EE /* Presenter */,
+				046DEB582CA1DA61009D43EE /* Model */,
 			);
 			name = MessageChat;
 			productName = MessageChat;
