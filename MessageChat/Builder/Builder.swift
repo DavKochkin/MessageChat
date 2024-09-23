@@ -57,5 +57,15 @@ class Builder {
         
         return UINavigationController(rootViewController: view) 
     }
+    
+    
+    static func getMessengerView() -> UIViewController {
+        let view = MessengerView()
+        let presenter = MessengerPresenter(view: view)
+        
+        view.presenter = presenter
+        
+        return view
+    }
 
 }

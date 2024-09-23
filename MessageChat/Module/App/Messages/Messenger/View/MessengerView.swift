@@ -12,6 +12,11 @@ protocol MessengerViewProtocol: AnyObject {
     
 }
 
-class MessengerView: MessagesViewController {
+class MessengerView: MessagesViewController, MessengerViewProtocol {
+    var presenter: MessengerPresenterProtocol!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
 }
