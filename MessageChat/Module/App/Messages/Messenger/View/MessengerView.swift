@@ -12,18 +12,21 @@ protocol MessengerViewProtocol: AnyObject {
     
 }
 
-class MessengerView: MessagesViewController, MessengerViewProtocol, MessagesLayoutDelegate {
+class MessengerView: MessagesViewController, MessengerViewProtocol {
     var presenter: MessengerPresenterProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = presenter.title
+        showMessageTimestampOnSwipeLeft = true
+        messengerSetup()
+        messagesCollectionView.reloadData()
     }
     
-    private func messengerSsetup() {
-        messagesCollectionView.messagesDataSource     = self
-        messagesCollectionView.messagesLayoutDelegate = self
-        messagesCollectionView.messageCellDelegate    = self
+    private func messengerSetup() {
+        messagesCollectionView.messagesDataSource      = self
+        messagesCollectionView.messagesLayoutDelegate  = self
+        messagesCollectionView.messagesDisplayDelegate = self
     }
 }
 
@@ -40,4 +43,8 @@ extension MessengerView: MessagesDataSource {
     func numberOfSections(in messagesCollectionView: MessageKit.MessagesCollectionView) -> Int {
         presenter.messages.count
     }
+}
+
+extension MessengerView: MessagesDisplayDelegate, MessagesLayoutDelegate {
+    
 }
