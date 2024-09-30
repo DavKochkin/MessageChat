@@ -17,6 +17,6 @@ class MessengerView: MessagesViewController, MessengerViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = presenter.title
     }
 }

@@ -25,7 +25,7 @@ class UserListView: UIViewController, UserListViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = String("Пользователи")
+        navigationItem.title = String("tabUsers")
         
         view.addSubview(tableView)
     }
