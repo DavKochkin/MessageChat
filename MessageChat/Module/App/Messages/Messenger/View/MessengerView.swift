@@ -46,7 +46,15 @@ extension MessengerView: MessagesDataSource {
 }
 
 extension MessengerView: MessagesDisplayDelegate, MessagesLayoutDelegate {
-    func cellTopLabelHeight(for message: any MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
+//    func cellTopLabelHeight(for message: any MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
+//        20
+//    }
+//    
+    func messageTopLabelHeight(for message: any MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
+        10
+    }
+    
+    func messageBottomLabelHeight(for message: any MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
         20
     }
     
@@ -58,6 +66,20 @@ extension MessengerView: MessagesDisplayDelegate, MessagesLayoutDelegate {
         
         let name = message.sender.displayName
         return NSAttributedString(string: name,
-                           attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)])
+                           attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16),
+                                        NSAttributedString.Key.backgroundColor: UIColor.lightGray])
+    }
+    
+    func messageBottomLabelAttributedText(for message: any MessageType, at indexPath: IndexPath) -> NSAttributedString? {
+        
+        let name = message.sentDate.description
+        return NSAttributedString(string: name,
+                           attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16),
+                                        NSAttributedString.Key.backgroundColor: UIColor.lightGray])
+    }
+
+    func configureAvatarView(_ avatarView: AvatarView, for message: any MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
+        avatarView.initials = String(message.sender.displayName.first!)
+        avatarView.backgroundColor = .blue
     }
 }
