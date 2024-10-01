@@ -46,5 +46,18 @@ extension MessengerView: MessagesDataSource {
 }
 
 extension MessengerView: MessagesDisplayDelegate, MessagesLayoutDelegate {
+    func cellTopLabelHeight(for message: any MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
+        20
+    }
     
+    func backgroundColor(for message: any MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
+        message.sender.senderId == presenter.selfSender.senderId ? .black : .green
+    }
+    
+    func messageTopLabelAttributedText(for message: any MessageType, at indexPath: IndexPath) -> NSAttributedString? {
+        
+        let name = message.sender.displayName
+        return NSAttributedString(string: name,
+                           attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16)])
+    }
 }
