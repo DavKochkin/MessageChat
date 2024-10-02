@@ -32,6 +32,7 @@ class MessengerView: MessagesViewController, MessengerViewProtocol {
     }
 }
 
+//MARK: - MessageDataSource
 
 extension MessengerView: MessagesDataSource {
     var currentSender: SenderType {
@@ -45,7 +46,22 @@ extension MessengerView: MessagesDataSource {
     func numberOfSections(in messagesCollectionView: MessageKit.MessagesCollectionView) -> Int {
         presenter.messages.count
     }
+    
+    private func insertMessage(_ message: Message) {
+        presenter.messages.append(message)
+        //Reload last section to update header/footer labels and insert a new one
+        messagesCollectionView.performBatchUpdates({
+            messagesCollectionView.insertSections(IndexSet(integer: presenter.messages.count - 1))
+            if presenter.messages.count >= 2 {
+                messagesCollectionView.reloadSections([presenter.messages.count - 2])
+            }
+        }, completion: {[weak self] _ in
+            self?.messagesCollectionView.scrollToLastItem(animated: true)
+        })
+    }
 }
+
+//MARK: - MessagesDisplayDelegate, MessagesLayoutDelegate
 
 extension MessengerView: MessagesDisplayDelegate, MessagesLayoutDelegate {
 //    func cellTopLabelHeight(for message: any MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> CGFloat {
@@ -86,7 +102,16 @@ extension MessengerView: MessagesDisplayDelegate, MessagesLayoutDelegate {
     }
 }
 
+//MARK: - InputBarAccessoryViewDelegate
 
 extension MessengerView: InputBarAccessoryViewDelegate {
-    didpre
+    func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
+        let message: Message = Message(sender: presenter.selfSender,
+                                       messageId: UUID().uuidString,
+                                       sentDate: Date(),
+                                       kind: .text(text))
+        
+        self.insertMessage(message)
+        inputBar.inputTextView.text = ""
+    }
 }
