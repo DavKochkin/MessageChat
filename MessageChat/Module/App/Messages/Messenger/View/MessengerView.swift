@@ -7,6 +7,7 @@
 
 import UIKit
 import MessageKit
+import InputBarAccessoryView
 
 protocol MessengerViewProtocol: AnyObject {
     
@@ -27,6 +28,7 @@ class MessengerView: MessagesViewController, MessengerViewProtocol {
         messagesCollectionView.messagesDataSource      = self
         messagesCollectionView.messagesLayoutDelegate  = self
         messagesCollectionView.messagesDisplayDelegate = self
+        messageInputBar.delegate                       = self
     }
 }
 
@@ -82,4 +84,9 @@ extension MessengerView: MessagesDisplayDelegate, MessagesLayoutDelegate {
         avatarView.initials = String(message.sender.displayName.first!)
         avatarView.backgroundColor = .blue
     }
+}
+
+
+extension MessengerView: InputBarAccessoryViewDelegate {
+    didpre
 }
